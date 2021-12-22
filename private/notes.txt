@@ -1,0 +1,91 @@
+git global cofig 
+
+git config --global user.name "Baktash Sana"
+git config --global user.email "baktash11@gmail.com"
+
+add git and node in Environment Variable 
+git init 
+git add . 
+git commit -m 'the message or description goes here'
+git push 
+git pull 
+git fitch 
+
+
+installing libraries
+npm i lite-server -g
+    lite-server
+npm i yarn -g 
+npm i nodemone -g 
+
+adding libraries 
+yarn add bootstrap 
+yarn add jquery
+yarn add popper.js
+yarn add @fortawesome/fontawesome-free
+yarn install 
+
+DOM 
+h2.addEventListener('click', ()=>{some code })
+create an element 
+let li = document.createElemen("li");
+add content to created element 
+li.textContent= "this is the new list item";
+append the new element or node to a parent element (main/ div/ ul... etc)
+ul.appendChild(li)
+
+create a new para 
+let new_p = document.createElement('p');
+new_p.textContent = "this is my frist para adding dynmicaly"; 
+
+get reference to the parentNode 
+let parentDiv = h2.parentNode; 
+insert the para before another node in html 
+parentDiv.insertBefore(new_p, h2);
+.childNode vs .children 
+for (let i = 0; i < ul.childNodes.length; i++) {
+    console.log(ul.childNodes[i]);
+            
+};
+
+for (let i = 0; i < ul.children.length; i++) {
+    console.log(ul.children[i]);
+           
+};
+
+forEach is only for an array but not for an html collection 
+
+ul.childNodes.forEach(element => {
+    console.log(element);
+});  
+
+ul.children.forEach(element => {
+    console.log(element);
+});
+
+//best way to loop a html objects 
+for (const i of ul.children) {
+    console.log(i);
+}
+
+
+LINKS
+http://www.csszengarden.com/
+https://getbootstrap.com/
+https://get.foundation/
+https://jquery.com/
+https://www.w3schools.com/ 
+https://fontawesome.com/
+https://babeljs.io/
+https://html5test.com/
+
+search key at google 
+yarn add font awesome-free
+
+
+
+https://github.com/durhamprogrammer
+https://youtube.com/playlist?list=PL5svY1bZDBZozihjynmpUIAbQPq26ZyEZ
+
+
+not on github yet
