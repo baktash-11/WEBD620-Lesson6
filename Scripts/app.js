@@ -6,11 +6,13 @@ let app;
 
     const Start = ()=>{
        
+        let mainContent = $("#mainContent")[0];
+        console.log(mainContent);
 
-
-
-
-
+        // $('.display-4').hide(3000); 
+        
+        
+        document.getElementById('index').style.display='non'
 
 
        main();
@@ -23,4 +25,4 @@ let app;
     
     window.addEventListener('load', Start);
 
-})(app || (app={}));
+})(app || (app={}));``

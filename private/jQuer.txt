@@ -1,0 +1,55 @@
+//jquer selector vs js 
+
+
+jQuery Selectors 
+$("p"); 
+$("id");
+$("class");
+
+$("#element-id");
+example 
+get an array elements
+let $("#main-content") ;
+get only one element 
+$("#main-content")[0];
+$(".element-className")[0];
+
+to call jQuery methods
+$("selector").methodName(parameters);
+
+$(".display-4").hide();
+$(".nav-link").css("font-weight", "bold")
+
+Some jQuery Examples
+get the value of text box
+const gallon =$('#gallons').val();
+
+change or set the value of an input element
+$("#gallons").val("");
+
+set the text in an element
+$("#email_address"_error").text("Email address is required");
+
+set the text for the next sibling with object changing 
+$("#last_name").next().text("Last name is required");
+
+submit a form
+$("#join_list").submit();
+
+move foucus to a form element or a link
+$("#email").focus();
+
+
+
+JavaScript
+document.getElementById("main-content");
+document.querySelector("#main-content");
+document.querySelectorAll("#main-content")[0];
+document.querySelectorAll("class-name')[0].style.display ='none'
+
+add more support for jQuery 
+type defintion
+yarn add @types/jQuery  
+
+
+
