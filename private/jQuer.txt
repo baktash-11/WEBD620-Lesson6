@@ -41,6 +41,13 @@ $("#email").focus();
 
 
 
+if(name.includes("index")){
+            //get the name of the page only
+            console.log(name.substring(1, name.length -5));
+        }
+        console.log(name.substring(1, name.length -5));
+
+
 JavaScript
 document.getElementById("main-content");
 document.querySelector("#main-content");
