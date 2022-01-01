@@ -1,10 +1,21 @@
 
+class contact {
+    constructor(name="", email="", number="", message=""){
+        this.name = name; 
+        this.email = email; 
+        this.number=number; 
+        this.message= message;
+    }
+}
+
+
+
 "use strict";
 //class in Ecma 15
 let app;
 ((app)=>{
 
-    let contactObj={};
+    let contactObj= new contact();
 
     const Start = ()=>{
         
@@ -109,6 +120,9 @@ let app;
     function DisplayContactPageContent(){
         
        submitBtn("name", "email", "number", "message");
+       resetBtn("name-star");
+       onChange("name", "Name has to be > 8 charactor!", "name-star");
+       onFocus("name", "Focus hs been avtivated");
  
     }
 
@@ -152,7 +166,8 @@ let app;
 
     // contact page methods (functions)
 
-    function submitBtn(name, email, number, message){
+    function submitBtn(name, email, number, message){ 
+
         $("#btn-submit").on("click", (e)=>{
 
 
@@ -170,6 +185,50 @@ let app;
             contactObj.message = _message;
             console.log(contactObj);
 
+            // clearing form using JS selector
+            // document.getElementById("contact-form").reset();
+            // clearing form using jquery selector 
+            $("#contact-form")[0].reset();
+        });
+    }
+
+    function resetBtn(star){
+
+        $("#btn-reset").on("click", (e)=>{
+            e.preventDefault();
+            if(confirm("Are you sure?")){
+                $("#contact-form")[0].reset();
+                $("#warrning-message").text("");
+                $("#"+star).css('color', 'gray');
+            }
+        });
+    }
+
+
+    // getting the lenght of name element 
+    function onChange(elementId , message , start){
+        let element = $("#"+elementId);
+
+        $(element).on("change", ()=>{
+            if($(element).length< 4 ){
+                // alert(`Name ${element.val()} is too short`)
+                $("#"+start).css('color', '#ff6f69');
+                $("#warrning-message").text(message);
+            }else
+            {
+                $(element).on("change", ()=>{
+                    $("#"+start).css('color', 'wheat');
+                    $("#warrning-message").text("");
+                });
+            }
+            console.log(message);
+        });
+    }
+
+    function onFocus(elementId , message ){
+        $("#"+elementId).on("focus", ()=>{
+            $("#"+elementId).select();
+            console.log(message);
         });
     }
 

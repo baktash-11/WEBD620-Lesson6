@@ -50,19 +50,29 @@
         <main class="jumbotron" id="contentArea">
           <h1 id="firstHeading" class="display-4 ">Contact us!</h1>
 
-          <form method="post">
+          <form method="post" id="contact-form">
             <div class="mb-3">
-              <label for="name" class="form-label">Full Name</label>
+              <label for="name" class="form-label">Full Name  &nbsp;</label>
+              <span id="name-star" class="star">
+                <i class="fas fa-star-of-life fa-xs"></i>
+                <i class="fas fa-star-of-life fa-xs"></i>
+                <i class="fas fa-star-of-life fa-xs"></i>
+              </span><p id="warrning-message"> </p>
               <input name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Full Name">
               <div id="emailHelp" class="form-text">We'll never share your Informat with anyone else.</div>
             </div>
             <div class="mb-3">
-              <label for="eamil" class="form-label">Email Address</label>
+              <label for="eamil" class="form-label">Email Address &nbsp;</label>
+              <span class="star" id="email-star">
+                <i class="fas fa-star-of-life fa-xs"></i>
+                <i class="fas fa-star-of-life fa-xs"></i>
+                <i class="fas fa-star-of-life fa-xs"></i>
+              </span>
               <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email@example.com">
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
-              <label for="contactNumber" class="form-label">Contact Number</label>
+              <label for="contactNumber" class="form-label">Contact Number  &nbsp;</label>
               <input name="number" type="tel" class="form-control" id="contactNumber" placeholder="(###)###-####">
 
             </div>

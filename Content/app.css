@@ -6,9 +6,13 @@ body{
 
 
 table{
-    background-color: #eaece5;
+    background-color: #e2e2e2;
+
     
    
+}
+label{
+    color: #e2e2e2;
 }
 tr:nth-child(odd){
     color:#3e4444;
@@ -30,4 +34,19 @@ aside{
     color: lightskyblue;
     padding: 0 6%;
 
+}
+#warrning-message{
+    display: inline-block;
+    color: tomato;
+    font-size: 12px;
+    padding:0  10%;
+   
+}
+.star{
+    color: gray;
+    font-size: 13px;
+    
+}
+.fa-star-of-life{
+    padding: 0 2%;
 }
