@@ -11,6 +11,7 @@ git push
 git pull 
 git fitch 
 
+//Editing the git and github remote 
 git remote rm origin
 git remote set-url origin https://my-new-url.git
 git remote -v
@@ -18,8 +19,15 @@ git remote -v
  git log
  git log --since=2.weeks
 
- cmmond to edit commints 
+ //cmmond to edit commints 
  git rebase -i HEAD~5
+
+//working with git branches 
+git branche new-branch-name
+//switch to a branch
+git checkout the-branch-name
+//create and switch to a branch 
+git checkout -b new-branch-name 
 
 
 installing libraries
@@ -95,7 +103,9 @@ yarn add font awesome-free
 
 
 https://github.com/durhamprogrammer
+https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
 https://youtube.com/playlist?list=PL5svY1bZDBZozihjynmpUIAbQPq26ZyEZ
+
 
 
 not on github yet
