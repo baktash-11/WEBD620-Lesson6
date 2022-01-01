@@ -53,20 +53,20 @@
           <form>
             <div class="mb-3">
               <label for="eamil" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email@example.com">
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
               <label for="contactNumber" class="form-label">Contact Number</label>
-              <input type="tel" class="form-control" id="contactNumber">
+              <input name="number" type="tel" class="form-control" id="contactNumber" placeholder="(###)###-####">
 
             </div>
             <div class="mb-3">
               <label for="contactMessage" class="form-label">Your Message</label>
-              <textarea class="form-control" id="contactMessage" rows="3"></textarea>
+              <textarea name="message" class="form-control" id="contactMessage" rows="3" placeholder="Type your message here!"></textarea>
             </div>
-            <button type="reset" class="btn btn-secondary"> Rest</button>
-            <button type="submit" class="btn btn-light">Submit</button>
+            <button type="reset" class="btn btn-secondary btn-contact"> Rest</button>
+            <button type="submit" class="btn btn-light btn-contact">Submit</button>
           </form>
           <hr class="my-4">
 
@@ -74,16 +74,34 @@
           
           
         </main>
-        <section id="top_story">
-          <h3>Contact us!</h3>
-         
-        </section>
+       
+      
+      
+      </div>
+      <div class="col-md-3 col-sm-12">
+        <aside>
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">Our Social Media!</p>
+              <a href=""><i class="fab fa-facebook-square fa-4x card-link"></i></a>
+              <a href=""><i class="fab fa-twitter-square fa-4x card-link"></i></a>
+              <a href=""><i class="fab fa-instagram-square fa-4x card-link"></i></a>
+              <a href=""><i class="fab fa-linkedin fa-4x card-link"></i></a>
+            </div>
+
+          </div>
+          
+        </aside>
       </div>
      </div>
 
   </div>
   <footer>
-    <p id="copy-right" >&copy;</p>
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+      
+      <h4 class="display-4 navbar-brand">&copy; CopyRight 2021.</h4>
+    </nav> 
+    
   </footer>
   
     

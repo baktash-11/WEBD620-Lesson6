@@ -13,9 +13,21 @@ table{
 tr:nth-child(odd){
     color:#3e4444;
 }
-.btn{
+.btn-contact{
     width: 100%;
     font-weight:600;
     margin-top: 5%;
     padding: 2% 0;
+}
+
+aside{
+    padding-top: 10%;
+    color:rgb(158, 158, 158);
+    text-align: center;
+}
+.fab{
+
+    color: lightskyblue;
+    padding: 0 6%;
+
 }
