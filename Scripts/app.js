@@ -32,27 +32,35 @@ let app;
             case "index": 
                 // home page 
                 console.log(pageName)
-                homePageContent();
-                
-                
+                DisplayHomePageContent();
                 
                 break; 
+
             case "about":
                 console.log(pageName)
+                DisplayAboutPageContent();
                 break; 
-                case "products": 
+
+            case "products": 
                 console.log(pageName)
-                //targeting taable at proeduct's page
-                $(" tr:even").css("background", "#E3F2FD");
+                DisplayProductsPageContent();
+                
                 break; 
+
             case "services":
                 console.log(pageName)
+                DisplayServicesPageContent();
+            
                 break; 
-                case "contact": 
+
+            case "contact": 
                 console.log(pageName)
+                DisplayContactPageContent();
                 break; 
+
             case "projects":
                 console.log(pageName)
+                DisplayProjectsPageContent();
                 break; 
             default:
                 // console.error("The page does not exist!")
@@ -68,7 +76,8 @@ let app;
 
     }
 
-    function homePageContent(){
+    //Home page functions
+    function DisplayHomePageContent(){
         
         document.getElementById("index").className="nav-link active";
 
@@ -76,6 +85,39 @@ let app;
         // btnOpenNewinWondowLinkJquery("projects.html",".btn" )
  
     }
+
+    function DisplayAboutPageContent(){
+        
+       
+ 
+    }
+
+    function DisplayProductsPageContent(){
+        
+       //targeting taable at proeduct's page
+       $(" tr:even").css("background", "#fefbd8");
+ 
+    }
+
+    function DisplayServicesPageContent(){
+        
+       
+ 
+    }
+
+    function DisplayContactPageContent(){
+        
+       
+ 
+    }
+
+    function DisplayProjectsPageContent(){
+        
+       
+ 
+    }
+
+
 
 
     //function call's btnRefById function and get tow parameters link and btn id
@@ -85,7 +127,7 @@ let app;
             location.href=_link;
         } 
     }
-
+    // getting button reference by Id
     function btnRefById(id){
         
         return document.getElementById(id);
@@ -102,10 +144,7 @@ let app;
             }else{
                 alert('Please allow popups for this website');
                 window.open(link)
-
             }
-
-          
         });
     }
 
