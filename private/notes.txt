@@ -11,6 +11,16 @@ git push
 git pull 
 git fitch 
 
+git remote rm origin
+git remote set-url origin https://my-new-url.git
+git remote -v
+
+ git log
+ git log --since=2.weeks
+
+ cmmond to edit commints 
+ git rebase -i HEAD~5
+
 
 installing libraries
 npm i lite-server -g
