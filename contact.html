@@ -50,7 +50,12 @@
         <main class="jumbotron" id="contentArea">
           <h1 id="firstHeading" class="display-4 ">Contact us!</h1>
 
-          <form>
+          <form method="post">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Full Name">
+              <div id="emailHelp" class="form-text">We'll never share your Informat with anyone else.</div>
+            </div>
             <div class="mb-3">
               <label for="eamil" class="form-label">Email Address</label>
               <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email@example.com">
@@ -62,11 +67,11 @@
 
             </div>
             <div class="mb-3">
-              <label for="contactMessage" class="form-label">Your Message</label>
-              <textarea name="message" class="form-control" id="contactMessage" rows="3" placeholder="Type your message here!"></textarea>
+              <label for="message" class="form-label">Your Message</label>
+              <textarea name="message" class="form-control" id="message" rows="3" placeholder="Type your message here!"></textarea>
             </div>
-            <button type="reset" class="btn btn-secondary btn-contact"> Rest</button>
-            <button type="submit" class="btn btn-light btn-contact">Submit</button>
+            <button id="btn-reset" type="reset" class="btn btn-secondary btn-contact"> Rest</button>
+            <button id="btn-submit" type="submit" class="btn btn-light btn-contact">Submit</button>
           </form>
           <hr class="my-4">
 

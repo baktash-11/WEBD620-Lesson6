@@ -4,6 +4,8 @@
 let app;
 ((app)=>{
 
+    let contactObj={};
+
     const Start = ()=>{
         
         // switch page function
@@ -106,7 +108,7 @@ let app;
 
     function DisplayContactPageContent(){
         
-       
+       submitBtn("name", "email", "number", "message");
  
     }
 
@@ -148,6 +150,28 @@ let app;
     }
 
 
+    // contact page methods (functions)
+
+    function submitBtn(name, email, number, message){
+        $("#btn-submit").on("click", (e)=>{
+
+
+            e.preventDefault();
+            //getting form data
+            let _name =$("#"+name).val();
+            let _email =$("#"+email).val()
+            let _number =$("#"+number).val()
+            let _message =$("#"+message).val()
+
+            console.log(`Name: ${_name} Email: ${_email} Number: ${_number} Message: ${_message}`)
+            contactObj.email = _email;
+            contactObj.name = _name;
+            contactObj.number= _number;
+            contactObj.message = _message;
+            console.log(contactObj);
+
+        });
+    }
 
 
     // jQuery loop function $.each
