@@ -25,6 +25,7 @@ let app;
 
     function pageSwatcher(){
 
+        //get page name window.location.pathname
         let name = window.location.pathname;
         let pageName = name.substring(1, name.length-5);
 
@@ -87,7 +88,6 @@ let app;
     }
 
     function DisplayAboutPageContent(){
-        
        
  
     }
@@ -100,9 +100,8 @@ let app;
     }
 
     function DisplayServicesPageContent(){
-        
        
- 
+       
     }
 
     function DisplayContactPageContent(){
@@ -147,5 +146,46 @@ let app;
             }
         });
     }
+
+
+
+
+    // jQuery loop function $.each
+    function jqueryEachLoopFunction(){
+        let obj ={
+            'name':'Baktash', 
+            'address': '71 coe dirve', 
+            'phone': '9054421991'
+        };
+
+        let colors=['blue', 'green', 'yellow', 'white'];
+
+        $.each(obj, (k, v)=>{
+            console.log(k + " : "+ v);
+        });
+
+        $.each(colors, (i , text)=>{
+            console.log(i + " : " +text);
+        })
+
+        $('li').each((i)=>{
+            console.log(i + " : "+$(this).text() )
+        });
+
+        // get an element html value 
+        // functions can be used .text() .html() .val()
+        $('.list-group-item').each((i)=>{
+            console.log(i + " : "+$(".list-group-item").html() );
+        });
+       
+    }
+
+    //windows location functions
+    function _WindowLocationFunctions(){
+        console.log(window.location.pathname);
+        console.log(window.location.href);
+        console.log(window.location.href= "index.html")
+    }
+    
 
 })(app || (app={}));``

@@ -13,3 +13,9 @@ table{
 tr:nth-child(odd){
     color:#3e4444;
 }
+.btn{
+    width: 100%;
+    font-weight:600;
+    margin-top: 5%;
+    padding: 2% 0;
+}

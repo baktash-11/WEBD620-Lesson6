@@ -44,25 +44,29 @@
   </nav>
   <div class="container" id="mainContent">
     <div class="row">
-      <div class="col">
+      <!-- adding bootstrap column the form   -->
+      <!-- class  = "offset-md-4 col-md-4" -->
+      <div class="col-md-6 offset-md-3 col-sm-12">
         <main class="jumbotron" id="contentArea">
-          <h1 id="firstHeading" class="display-4 ">How to get to us!</h1>
+          <h1 id="firstHeading" class="display-4 ">Contact us!</h1>
 
           <form>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="eamil" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="contactNumber" class="form-label">Contact Number</label>
+              <input type="tel" class="form-control" id="contactNumber">
+
             </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <div class="mb-3">
+              <label for="contactMessage" class="form-label">Your Message</label>
+              <textarea class="form-control" id="contactMessage" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-dark">Submit</button>
+            <button type="reset" class="btn btn-secondary"> Rest</button>
+            <button type="submit" class="btn btn-light">Submit</button>
           </form>
           <hr class="my-4">
 
