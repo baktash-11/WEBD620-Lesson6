@@ -118,11 +118,20 @@ let app;
     }
 
     function DisplayContactPageContent(){
+
+        $("#name").select();
         
        submitBtn("name", "email", "number", "message");
        resetBtn("name-star");
-       onChange("name", "Name has to be > 8 charactor!", "name-star");
+       //on change methods for form inputs
+       onChange("name", "Name is too short", "name-star", "alert-message-name");
+       onChange("email", "Email is too short", "email-star", "alert-message-email");
+       onChange("number", "Number is too short", "number-star", "alert-message-number");
+       
        onFocus("name", "Focus hs been avtivated");
+       restrectChar();
+
+      
  
     }
 
@@ -192,36 +201,60 @@ let app;
         });
     }
 
+    function resetAllerts(){
+        $("#alert-message-name").text("");
+        $("#alert-message-email").text("");
+        $("#alert-message-number").text("");
+        $("#name").css("background", "#fff");
+        $("#email").css("background", "#fff");
+        $("#number").css("background", "#fff");
+        $("#message").css("background", "#fff");
+        $(".star").css('color', 'gray');
+        
+
+    }
+
     function resetBtn(star){
 
         $("#btn-reset").on("click", (e)=>{
             e.preventDefault();
             if(confirm("Are you sure?")){
                 $("#contact-form")[0].reset();
-                $("#warrning-message").text("");
-                $("#"+star).css('color', 'gray');
+               resetAllerts();
             }
         });
     }
 
+   
+
 
     // getting the lenght of name element 
-    function onChange(elementId , message , start){
-        let element = $("#"+elementId);
+    // desicription
+    // elementId = input id
+    // message is the alert message 
+    // Stars which indicate requirement
+    // alertId is the p tag where displays the message
 
-        $(element).on("change", ()=>{
-            if($(element).length< 4 ){
+    function onChange(elementId , message , start, alertId){
+
+        let element = $("#"+elementId);
+        
+        $(element).on("blur", ()=>{
+            let elementLength = element.val().length;
+            if(elementLength< 4 ){
                 // alert(`Name ${element.val()} is too short`)
                 $("#"+start).css('color', '#ff6f69');
-                $("#warrning-message").text(message);
+                $(element).css('background', 'thistle');
+                $("#"+alertId).text(message);
+                $(element).focus();
+                $(element).select();
+                console.log(element.val());
+                
             }else
             {
-                $(element).on("change", ()=>{
-                    $("#"+start).css('color', 'wheat');
-                    $("#warrning-message").text("");
-                });
+               resetAllerts();
             }
-            console.log(message);
+           
         });
     }
 
@@ -232,6 +265,22 @@ let app;
         });
     }
 
+
+    //FUCNTION TO PREVENT A STRING ENTRY IN PHONE NUMBER 
+    function restrectChar(){
+        let invalidChar = ['_', '+', 'e','~','@', '#', '$', '%', '^'];
+    const numberIput = $("#number");
+    numberIput.on("keydown",(e)=>{
+       
+        if( invalidChar.includes(e.key) && e.which < 33 || e.which > 57){
+            e.preventDefault();
+        }
+        
+        
+    })
+
+    }
+    
 
     // jQuery loop function $.each
     function jqueryEachLoopFunction(){

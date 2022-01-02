@@ -28,6 +28,9 @@ git branche new-branch-name
 git checkout the-branch-name
 //create and switch to a branch 
 git checkout -b new-branch-name 
+//push the new branch to remote
+git push -u origion brnach-name
+
 
 
 installing libraries

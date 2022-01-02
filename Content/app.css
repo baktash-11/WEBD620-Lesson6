@@ -35,11 +35,13 @@ aside{
     padding: 0 6%;
 
 }
-#warrning-message{
+.warrning-message{
     display: inline-block;
-    color: tomato;
+    color: white;
     font-size: 12px;
     padding:0  10%;
+    background-color: tomato;
+    border-radius: 10px;
    
 }
 .star{
@@ -50,3 +52,6 @@ aside{
 .fa-star-of-life{
     padding: 0 2%;
 }
+/* #name{
+    background-color: thistle;
+} */
